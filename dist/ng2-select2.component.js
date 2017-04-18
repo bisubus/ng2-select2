@@ -5,7 +5,7 @@ var Select2Component = (function () {
     function Select2Component(renderer) {
         this.renderer = renderer;
         // enable / disable default style for select2
-        this.cssImport = false;
+        this.cssImport = true;
         // enable / disable select2
         this.disabled = false;
         // emitter when value is changed
