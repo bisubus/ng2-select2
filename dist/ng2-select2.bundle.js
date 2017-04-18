@@ -89,6 +89,13 @@ exports.Select2Component = (function () {
                 data: _this.element.select2('data')
             });
         });
+        this.element.on('select2:unselecting', function () {
+            var opts = _this.element.select2('data').options;
+            opts.set('disabled', true);
+            setTimeout(function () {
+                opts.set('disabled', false);
+            }, 1);
+        });
     };
     Select2Component.prototype.ngOnDestroy = function () {
         if (this.element) {
