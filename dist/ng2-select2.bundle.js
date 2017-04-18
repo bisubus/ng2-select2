@@ -90,7 +90,7 @@ exports.Select2Component = (function () {
             });
         });
         this.element.on('select2:unselecting', function () {
-            var opts = _this.element.select2('data').options;
+            var opts = _this.element.data('select2').options;
             opts.set('disabled', true);
             setTimeout(function () {
                 opts.set('disabled', false);

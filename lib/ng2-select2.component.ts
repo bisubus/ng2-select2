@@ -121,7 +121,7 @@ export class Select2Component implements AfterViewInit, OnChanges, OnDestroy, On
         });
 
         this.element.on('select2:unselecting', () => {
-            let opts = this.element.select2('data').options;
+            let opts = this.element.data('select2').options;
             opts.set('disabled', true);
             setTimeout(() => {
                 opts.set('disabled', false);
