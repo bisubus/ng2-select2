@@ -1,13 +1,4 @@
 "use strict";
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var Select2Component = (function () {
@@ -143,46 +134,27 @@ var Select2Component = (function () {
     };
     return Select2Component;
 }());
-__decorate([
-    core_1.ViewChild('selector'),
-    __metadata("design:type", core_1.ElementRef)
-], Select2Component.prototype, "selector", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Array)
-], Select2Component.prototype, "data", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Object)
-], Select2Component.prototype, "value", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Boolean)
-], Select2Component.prototype, "cssImport", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], Select2Component.prototype, "width", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Boolean)
-], Select2Component.prototype, "disabled", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Object)
-], Select2Component.prototype, "options", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", Object)
-], Select2Component.prototype, "valueChanged", void 0);
-Select2Component = __decorate([
-    core_1.Component({
-        selector: 'select2',
-        template: "\n        <select #selector>\n            <ng-content select=\"option, optgroup\">\n            </ng-content>\n        </select>",
-        encapsulation: core_1.ViewEncapsulation.None,
-        changeDetection: core_1.ChangeDetectionStrategy.OnPush
-    }),
-    __metadata("design:paramtypes", [core_1.Renderer])
-], Select2Component);
+Select2Component.decorators = [
+    { type: core_1.Component, args: [{
+                selector: 'select2',
+                template: "\n        <select #selector>\n            <ng-content select=\"option, optgroup\">\n            </ng-content>\n        </select>",
+                encapsulation: core_1.ViewEncapsulation.None,
+                changeDetection: core_1.ChangeDetectionStrategy.OnPush
+            },] },
+];
+/** @nocollapse */
+Select2Component.ctorParameters = function () { return [
+    { type: core_1.Renderer, },
+]; };
+Select2Component.propDecorators = {
+    'selector': [{ type: core_1.ViewChild, args: ['selector',] },],
+    'data': [{ type: core_1.Input },],
+    'value': [{ type: core_1.Input },],
+    'cssImport': [{ type: core_1.Input },],
+    'width': [{ type: core_1.Input },],
+    'disabled': [{ type: core_1.Input },],
+    'options': [{ type: core_1.Input },],
+    'valueChanged': [{ type: core_1.Output },],
+};
 exports.Select2Component = Select2Component;
 //# sourceMappingURL=ng2-select2.component.js.map
