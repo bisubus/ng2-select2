@@ -1,3 +1,6 @@
+type JQueryWTF = any;
+type Select2OptionsWTF = any;
+
 import {
     AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, EventEmitter, Input, OnChanges, OnDestroy,
     Output, SimpleChanges, ViewChild, ViewEncapsulation, Renderer, OnInit
@@ -34,12 +37,12 @@ export class Select2Component implements AfterViewInit, OnChanges, OnDestroy, On
     @Input() disabled: boolean = false;
 
     // all additional options
-    @Input() options: Select2Options;
+    @Input() options: Select2OptionsWTF;
 
     // emitter when value is changed
     @Output() valueChanged = new EventEmitter();
 
-    private element: JQuery = undefined;
+    private element: JQueryWTF = undefined;
     private check: boolean = false;
 
     constructor(private renderer: Renderer) { }
