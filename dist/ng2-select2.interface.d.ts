@@ -1,5 +1,6 @@
-/// <reference types="jquery" />
-/// <reference types="select2" />
+type JQueryWTF = any;
+type Select2OptionsWTF = any;
+
 export interface Select2OptionData {
     id: string;
     text: string;
@@ -8,5 +9,5 @@ export interface Select2OptionData {
     additional?: any;
 }
 export interface Select2TemplateFunction {
-    (state: Select2OptionData): JQuery | string;
+    (state: Select2OptionData): JQueryWTF | string;
 }
