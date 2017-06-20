@@ -1,4 +1,6 @@
-/// <reference types="select2" />
+type JQueryWTF = any;
+type Select2OptionsWTF = any;
+
 import { AfterViewInit, ElementRef, EventEmitter, OnChanges, OnDestroy, SimpleChanges, Renderer, OnInit } from '@angular/core';
 import { Select2OptionData } from './ng2-select2.interface';
 export declare class Select2Component implements AfterViewInit, OnChanges, OnDestroy, OnInit {
@@ -9,7 +11,7 @@ export declare class Select2Component implements AfterViewInit, OnChanges, OnDes
     cssImport: boolean;
     width: string;
     disabled: boolean;
-    options: Select2Options;
+    options: Select2OptionsWTF;
     valueChanged: EventEmitter<{}>;
     private element;
     private check;
